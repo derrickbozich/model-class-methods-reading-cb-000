@@ -3,13 +3,13 @@
 ## Objectives
 
 1. Know when to use a model class method
-2. Create model class methods for custom queries
+2. Create model class methods for custom queries!
 
 ## Lesson
 
 We're gonna keep working on our blog application and adding more
 features, so make sure to follow along and try out the code for yourself as
-we go! 
+we go!
 
 Make sure to run `rake db:seed` to get some starter posts and authors.
 You might be surprised to see the big names that definitely wrote these
@@ -42,7 +42,7 @@ filtering:
 <% @posts.each do |post| %>
 
   ...
-  
+
 <% end %>
 ```
 
@@ -104,7 +104,7 @@ Let's get back into our view and add the new filter to our form:
 
 <%= form_tag("/posts", method: "get") do %>
   <%= select_tag "author", options_from_collection_for_select(Author.all, "id", "name"), include_blank: true %>
-  
+
   <!-- new code -->
   <%= select_tag "date", options_for_select(["Today", "Old News"]), include_blank: true %>
   <%= submit_tag "Filter" %>
